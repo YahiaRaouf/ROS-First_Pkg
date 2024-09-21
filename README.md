@@ -8,10 +8,10 @@ This repository contains my first ROS (Robot Operating System) package, showcasi
 - [Overview](#overview)
 - [Features](#features)
 - [Installation](#installation)
-- [Package Structure](#package-structure)
 - [Clone the repo](#clone-the-repo)
 - [Build the package](#build-the-package)
-- [Package strucutre](#package-structure)
+- [Package structure](#package-structure)
+- [launch pub & sub](#launch-pub-&-sub)
 - [Custom Messages](#custom-messages)
 - [Usage](#usage)
   - [Publisher and Subscriber](#publisher-and-subscriber)
@@ -61,23 +61,35 @@ source devel/setup.bash
 ```bash
 my_first_ros_package/
 ├── action/                   # Action definitions
-│   └── MyAction.action       # Custom action file
+│   └── first_act.action      # Custom action file
 ├── msg/                      # Custom message definitions
-│   └── MyCustomMsg.msg       # Example custom message
+│   └── custom_msg.msg        # Example custom message
 ├── srv/                      # Custom service definitions
-│   └── MyService.srv         # Example service definition
+│   └── first_srv.srv         # Example service definition
 ├── src/                      # Source code for nodes
-│   ├── publisher_node.cpp    # Publisher node implementation
-│   ├── subscriber_node.cpp   # Subscriber node implementation
-│   ├── service_server.cpp    # Service server implementation
-│   ├── service_client.cpp    # Service client implementation
+│   ├── pub.cpp               # Publisher node implementation
+│   ├── sub.cpp               # Subscriber node implementation
+│   ├── server.cpp            # Service server implementation
+│   ├── client.cpp            # Service client implementation
 │   ├── action_server.cpp     # Action server implementation
 │   ├── action_client.cpp     # Action client implementation
 ├── launch/                   # Launch files
-│   ├── pub_sub.launch        # Launch file for publisher and subscriber
-│   ├── service.launch        # Launch file for service client and server
-│   ├── action.launch         # Launch file for action client and server
+│   ├── pubToSub.launch       # Launch file for publisher and subscriber
+│   ├── clientToServer.launch # Launch file for service client and server
 ├── CMakeLists.txt            # Configuration for CMake
 ├── package.xml               # Package metadata and dependencies
 └── README.md                 # This file
 ```
+## launch pub & sub
+to launch the pub and sub nodes in the first_pkg cd to the workspace
+```bash
+cd ~/catkinws
+```
+and then use the command 
+```bash
+roslaunch first_pkg pubToSub.launch
+```
+you will see a string and intiger message sent from the publisher node to the subscriber node using the custom_msgs declared in the msg folder in the package
+
+
+

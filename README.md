@@ -9,6 +9,9 @@ This repository contains my first ROS (Robot Operating System) package, showcasi
 - [Features](#features)
 - [Installation](#installation)
 - [Package Structure](#package-structure)
+- [Clone the repo](#clone-the-repo)
+- [Build the package](#build-the-package)
+- [Package strucutre](#package-structure)
 - [Custom Messages](#custom-messages)
 - [Usage](#usage)
   - [Publisher and Subscriber](#publisher-and-subscriber)
@@ -42,7 +45,7 @@ Ensure that ROS Noetic (or your ROS distribution) is installed on your system.
 sudo apt update
 sudo apt install ros-noetic-desktop-full
 ```
-## clone the repo
+## Clone the repo
 Navigate to your ROS workspace (usually ~/catkin_ws/src) and clone the repository:
 ```bash
 cd ~/catkin_ws/src

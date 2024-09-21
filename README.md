@@ -11,15 +11,8 @@ This repository contains my first ROS (Robot Operating System) package, showcasi
 - [Clone the repo](#clone-the-repo)
 - [Build the package](#build-the-package)
 - [Package structure](#package-structure)
-- [launch pub & sub](#launch-pub-&-sub)
+- [pub & sub](#pub-&-sub)
 - [Custom Messages](#custom-messages)
-- [Usage](#usage)
-  - [Publisher and Subscriber](#publisher-and-subscriber)
-  - [Service Client and Server](#service-client-and-server)
-  - [Action Client and Server](#action-client-and-server)
-- [Launch Files](#launch-files)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 This package serves as a learning project for ROS, implementing various communication mechanisms between nodes such as topics, services, and actions. It also demonstrates how to create custom messages and use ROS launch files to automate node execution.
@@ -80,16 +73,17 @@ my_first_ros_package/
 ├── package.xml               # Package metadata and dependencies
 └── README.md                 # This file
 ```
-## launch pub & sub
-to launch the pub and sub nodes in the first_pkg cd to the workspace
+## pub & sub
+to launch the pub and sub nodes in the first_pkg ,  cd to the workspace
 ```bash
-cd ~/catkinws
+cd ~/catkin_ws    #your workspace can hold any name , but catkin_ws is the usual
 ```
 and then use the command 
 ```bash
 roslaunch first_pkg pubToSub.launch
 ```
-you will see a string and intiger message sent from the publisher node to the subscriber node using the custom_msgs declared in the msg folder in the package
+you will see a string and integer message sent from the publisher node to the subscriber node using the custom_msgs declared in the msg folder in the package
+
 
 
 

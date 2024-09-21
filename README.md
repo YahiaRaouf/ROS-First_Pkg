@@ -25,8 +25,6 @@ This package serves as a learning project for ROS, implementing various communic
 - **Publisher/Subscriber**: Implements a basic topic communication between nodes.
 - **Service Client/Server**: Demonstrates synchronous communication using ROS services.
 - **Action Client/Server**: Implements goal-oriented asynchronous communication using the action library.
-- **Custom Messages**: Created custom message types for communication between nodes.
-- **Launch Files**: Set up launch files to easily start related nodes.
 
 ## Features
 - **Publisher and Subscriber Nodes**: Nodes that communicate using ROS topics.
@@ -43,3 +41,40 @@ Ensure that ROS Noetic (or your ROS distribution) is installed on your system.
 ```bash
 sudo apt update
 sudo apt install ros-noetic-desktop-full
+```
+## clone the repo
+Navigate to your ROS workspace (usually ~/catkin_ws/src) and clone the repository:
+```bash
+cd ~/catkin_ws/src
+git clone https://github.com/username/my_first_ros_package.git
+```
+## build the package
+```bash
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+```
+## Package structure
+```bash
+my_first_ros_package/
+├── action/                   # Action definitions
+│   └── MyAction.action       # Custom action file
+├── msg/                      # Custom message definitions
+│   └── MyCustomMsg.msg       # Example custom message
+├── srv/                      # Custom service definitions
+│   └── MyService.srv         # Example service definition
+├── src/                      # Source code for nodes
+│   ├── publisher_node.cpp    # Publisher node implementation
+│   ├── subscriber_node.cpp   # Subscriber node implementation
+│   ├── service_server.cpp    # Service server implementation
+│   ├── service_client.cpp    # Service client implementation
+│   ├── action_server.cpp     # Action server implementation
+│   ├── action_client.cpp     # Action client implementation
+├── launch/                   # Launch files
+│   ├── pub_sub.launch        # Launch file for publisher and subscriber
+│   ├── service.launch        # Launch file for service client and server
+│   ├── action.launch         # Launch file for action client and server
+├── CMakeLists.txt            # Configuration for CMake
+├── package.xml               # Package metadata and dependencies
+└── README.md                 # This file
+```

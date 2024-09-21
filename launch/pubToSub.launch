@@ -1,0 +1,4 @@
+<launch>
+	<node name="pub" pkg="first_pkg" type="pub" output="screen" launch-prefix="xterm -e"/>
+	<node name="sub" pkg="first_pkg" type="sub" output="screen" launch-prefix="xterm -e"/>
+</launch>

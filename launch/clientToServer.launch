@@ -1,0 +1,6 @@
+<launch>
+<node name="Server" pkg="first_pkg"
+type="server" output="screen"/>
+<node name="Client" pkg="first_pkg"
+type="client" output="screen"/>
+</launch>

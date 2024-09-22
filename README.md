@@ -150,7 +150,7 @@ to start the nodes. first start the server , then , the client.
 ```bash
 cd ~/catkin_ws
 rosrun first_pkg action_server
-rosrun first_pkg action_client [goal] [arg1] [arg2]
+rosrun first_pkg action_client [arg1] [arg2]
 ```
 arg1 is the goal to be reached by the server.
 arg2 is the time in which the operation is canceled after.

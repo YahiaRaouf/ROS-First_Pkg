@@ -12,7 +12,7 @@ This repository contains my first ROS (Robot Operating System) package, showcasi
 - [Build the package](#build-the-package)
 - [Package structure](#package-structure)
 - [Publisher and subscriber](#publisher-and-subscriber)
-  - [Custom Messages](#custom-message)
+  - [Custom Message](#custom-message)
 
 ## Overview
 This package serves as a learning project for ROS, implementing various communication mechanisms between nodes such as topics, services, and actions. It also demonstrates how to create custom messages and use ROS launch files to automate node execution.
@@ -74,6 +74,9 @@ my_first_ros_package/
 └── README.md                 # This file
 ```
 ## Publisher and subscriber
+Publsihers and subscriber nodes are the most basic program you can implement as a ROS beginner , basically the both  nodes talk to each other using a certian type of messsage , commmunicating through Topics.
+![Alt Text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdocs.ros.org%2Fen%2Ffoxy%2FTutorials%2FBeginner-CLI-Tools%2FUnderstanding-ROS2-Topics%2FUnderstanding-ROS2-Topics.html&psig=AOvVaw3VecHsV6qjtCPB6u-MnOmo&ust=1727080935474000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCICJ-f-T1ogDFQAAAAAdAAAAABAE)
+
 to launch the pub and sub nodes in the first_pkg ,  cd to the workspace
 ```bash
 cd ~/catkin_ws    #your workspace can hold any name , but catkin_ws is the usual
@@ -96,6 +99,8 @@ std_msgs/Int32 number
 ```
 Here i implemented a message or a struct of name custom_msgs that contain two variables , a string and an int.
 they were used mainly in the Publisher and subscriber nodes.
+
+
 
 
 

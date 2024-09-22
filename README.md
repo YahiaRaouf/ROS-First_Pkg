@@ -109,6 +109,18 @@ to launch the server/client launch file
 cd ~/catkin_ws
 roslaunch first_pkg clientToServer
 ```
+a service needs a type of message to be requested and responded to , which is created in a .srv file in the srv folder inside the package.
+for example , first_srv.srv file:
+```bash
+string in
+---
+string out
+```
+as easy as that :)
+services are mainly used when you want a specific action done at a specific time.
+like when turning a robot sensor off , or when you want to move an arm to a specific location when an action is done.
+and so on.
+
 
 
 

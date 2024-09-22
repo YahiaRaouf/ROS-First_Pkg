@@ -152,5 +152,5 @@ cd ~/catkin_ws
 rosrun first_pkg action_server
 rosrun first_pkg action_client [goal] [arg1] [arg2]
 ```
-**.**arg1 is the goal to be reached by the server.
-**.**arg2 is the time in which the operation is canceled after.
+arg1 is the goal to be reached by the server.
+arg2 is the time in which the operation is canceled after.

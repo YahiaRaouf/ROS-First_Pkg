@@ -11,7 +11,7 @@ This repository contains my first ROS (Robot Operating System) package, showcasi
 - [Clone the repo](#clone-the-repo)
 - [Build the package](#build-the-package)
 - [Package structure](#package-structure)
-- [pub & sub](#pub-&-sub)
+- [Pub & sub](#pub-&-sub)
   - [Custom Messages](#custom-messages)
 
 ## Overview

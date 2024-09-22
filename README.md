@@ -98,10 +98,17 @@ the file should look like somtheing similar to this
 std_msgs/String name
 std_msgs/Int32 number
 ```
-Here i implemented a message or a struct of name custom_msgs that contain two variables , a string and an int.
+Here i implemented a message or a struct of name custom_msgs that contain two variables , a string and an integer.
 they were used mainly in the Publisher and subscriber nodes.
 
+## Service
+a Service is another way of communication between nodes , unlike the publisher and subscriber where the communication between the nodes is continious , the Service's client starts to request a service from the service's server. only then ,  the server start doing what its programed to do.
 
+to launch the server/client launch file 
+```bash
+cd ~/catkin_ws
+roslaunch first_pkg clientToServer
+```
 
 
 

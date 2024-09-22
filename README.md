@@ -13,6 +13,8 @@ This repository contains my first ROS (Robot Operating System) package, showcasi
 - [Package structure](#package-structure)
 - [Publisher and subscriber](#publisher-and-subscriber)
   - [Custom Message](#custom-message)
+- [Service](#service)
+- [Actionlib](#action-lib)
 
 ## Overview
 This package serves as a learning project for ROS, implementing various communication mechanisms between nodes such as topics, services, and actions. It also demonstrates how to create custom messages and use ROS launch files to automate node execution.
@@ -104,6 +106,8 @@ they were used mainly in the Publisher and subscriber nodes.
 ## Service
 a Service is another way of communication between nodes , unlike the publisher and subscriber where the communication between the nodes is continious , the Service's client starts to request a service from the service's server. only then ,  the server start doing what its programed to do.
 
+![Service-SingleServiceClient](https://github.com/user-attachments/assets/7336bbe2-429f-484e-a954-03831953b978)
+
 to launch the server/client launch file 
 ```bash
 cd ~/catkin_ws
@@ -120,6 +124,34 @@ as easy as that :)
 services are mainly used when you want a specific action done at a specific time.
 like when turning a robot sensor off , or when you want to move an arm to a specific location when an action is done.
 and so on.
+
+## Actionlib
+The ROS Action Library is used for asynchronous communication between nodes, allowing long-running tasks to be executed without blocking the client. Actions are an extension of ROS services but provide more flexibility, especially for tasks that require feedback, the ability to cancel, or take an indefinite amount of time to complete.
+
+to declare an action you have to create an aciton file in the action folder like first_act.action.
+which is written like this: 
+
+```bash
+#goal definition
+int32 count
+---
+#result definition
+int32 final_count
+---
+#feedback
+int32 current_number
+```
+here we defined a data type for the goal , the result and the feedback variable of the action.
+the implementation in this package mainly cancles teh client request if the server didnt achieve the goal in a certian time and sends another request in hope it will be achieved this time.
+
+to start the nodes. first start the server , then , the client.
+```bash
+cd ~/catkin_ws
+rosrun first_pkg action_server
+rosrun first_pkg action_client [goal] [arg1] [arg2]
+```
+. arg1 is the goal to be reached by the server
+. arg2 is the time in which the operation is canceled after
 
 
 

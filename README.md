@@ -128,6 +128,8 @@ and so on.
 ## Actionlib
 The ROS Action Library is used for asynchronous communication between nodes, allowing long-running tasks to be executed without blocking the client. Actions are an extension of ROS services but provide more flexibility, especially for tasks that require feedback, the ability to cancel, or take an indefinite amount of time to complete.
 
+![Action-SingleActionClient](https://github.com/user-attachments/assets/7895183a-af8b-4359-94c7-2fa259920db5)
+
 to declare an action you have to create an aciton file in the action folder like first_act.action.
 which is written like this: 
 
@@ -150,12 +152,5 @@ cd ~/catkin_ws
 rosrun first_pkg action_server
 rosrun first_pkg action_client [goal] [arg1] [arg2]
 ```
-. arg1 is the goal to be reached by the server
-. arg2 is the time in which the operation is canceled after
-
-
-
-
-
-
-
+**.**arg1 is the goal to be reached by the server.
+**.**arg2 is the time in which the operation is canceled after.

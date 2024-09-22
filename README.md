@@ -14,7 +14,7 @@ This repository contains my first ROS (Robot Operating System) package, showcasi
 - [Publisher and subscriber](#publisher-and-subscriber)
   - [Custom Message](#custom-message)
 - [Service](#service)
-- [Actionlib](#action-lib)
+- [Actionlib](#actionlib)
 
 ## Overview
 This package serves as a learning project for ROS, implementing various communication mechanisms between nodes such as topics, services, and actions. It also demonstrates how to create custom messages and use ROS launch files to automate node execution.
